@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <style>
+        html {
+            background: #0a0a0a;
+        }
+
+        :root {
+            --background-gradient: radial-gradient(ellipse at top left, #094074 0%, rgba(0, 0, 0, 0) 35%);
+            --text-color: #e0e0e0;
+            --link-color: #76c7c0;
+            --link-hover-color: #a1e1d6;
+            --header-background: rgba(0, 0, 0, 0.7);
+            --footer-background: rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background: var(--background-gradient);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        #sobre-mim h1 {
+            margin: 0;
+            color: var(--text-color);
+            padding: 10px 0px 10px 0px;
+            font-size: 50px;
+        }
+
+        #sobre-mim {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            color: var(--text-color);
+            margin: 0 1em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: var(--link-hover-color);
+        }
+
+        section {
+            padding: 5em 2em 2em;
+            max-width: 800px;
+            margin: auto;
+            color: var(--text-color);
+        }
+
+        section h2 {
+            border-bottom: 2px solid var(--text-color);
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+
+        footer {
+            background-color: var(--footer-background);
+            color: var(--text-color);
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            bottom: 0;
+            border-top: 1px solid #444;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding-top: 80px; /* Ajuste para compensar o header fixo */
+        }
+
+        .link-section {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid #545454; /* Cor da borda */
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 1em;
+            background: transparent;
+            text-align: center;
+        }
+
+        .link-section a {
+            display: block;
+            padding: 1em;
+            color: #e0e0e0;
+            margin: 0.5em 0;
+            font-weight: bold;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .link-section a:hover {
+            color: #fff;
+        }
+
+        .contact-form {
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        .contact-form h2 {
+            margin-top: 0;
+            color: var(--text-color);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: var(--text-color);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.8em;
+            margin-bottom: 1em;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background: #222;
+            color: var(--text-color);
+        }
+
+        .contact-form button {
+            background-color: var(--link-color);
+            color: #fff;
+            border: none;
+            padding: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #a1e1d6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="sobre-mim">
+            <img src="https://em-content.zobj.net/source/apple/81/shrug_emoji-modifier-fitzpatrick-type-1-2_1f937-1f3fb_1f3fb.png" alt="eu" />
+            <div>
+                <h1>Olá eu sou a Yngrid 👋,</h1>
+                <span>Estudante de tecnologia na faculdade Uninter</span>
+            </div>
+        </section>
+
+        <section class="link-section">
+            <a href="sobre.html">Inicio</a>
+            <a href="academico.html">Formação</a>
+            <a href="contato.html">Contato</a>
+            <a href="https://github.com/yngridoliveirass">GitHub</a>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Yngrid. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
